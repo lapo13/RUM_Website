@@ -1,0 +1,13 @@
+# File di sistema macOS
+.DS_Store
+._*
+
+# Editor
+*.swp
+*~
+.vscode/
+.idea/
+
+# Log e file temporanei
+*.log
+tmp/

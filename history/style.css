@@ -1,0 +1,154 @@
+/* ========================================
+   History - La storia del festival
+   ======================================== */
+
+:root {
+  --color-background: #171717;
+  --color-surface: #262626;
+  --color-text: #f5f5f5;
+  --color-accent: #e8ff42;
+  --radius: 16px;
+  --radius-lg: 24px;
+}
+
+/* ========================================
+   Elementi base e tipografia
+   ======================================== */
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-background);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  color: var(--color-accent);
+  font-size: 60px;
+  line-height: 1.1;
+}
+
+h2 {
+  color: var(--color-accent);
+  font-size: 28px;
+}
+
+p {
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+/* ========================================
+   Intestazione e navigazione
+   ======================================== */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+}
+
+.nav-link.active {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+/* Bottone nella navbar per la pagina "Storia" */
+.nav-cta {
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.15s ease;
+}
+
+.nav-cta:hover {
+  transform: scale(1.05);
+  color: var(--color-background);
+}
+
+.nav-cta.active {
+  outline: 2px solid var(--color-text);
+}
+
+/* ========================================
+   Contenuto principale
+   ======================================== */
+
+section {
+  box-sizing: border-box;
+  width: calc(100% - 30px);
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+}
+
+/* ========================================
+   Hero
+   ======================================== */
+
+.hero {
+  text-align: center;
+}
+
+.hero-edizione {
+  color: var(--color-accent);
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+}
+
+.hero-titolo {
+  font-size: 48px;
+  margin-top: 8px;
+}
+
+#anno-corrente {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+/* ========================================
+   Layout per schermi piccoli
+   ======================================== */
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+}

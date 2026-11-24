@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUM | Rock Un Monte</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+<body>
+    <header>
+      <h1>Rock Un Monte</h1>
+
+      <nav>
+        <ul>
+          <li><a class="nav-link active" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="#programma">Programma</a></li>
+          <li><a class="nav-link" href="#artisti">Artisti</a></li>
+          <li><a class="nav-cta" href="../history/index.html">La storia del festival</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Edizione corrente -->
+      <section class="hero">
+        <h2 class="hero-titolo">RUM <span class="edizione"></span></h2>
+        <img
+          class="festival"
+          src="images/stage.jpeg"
+          alt="Palco del festival Rock Un Monte"
+        >
+        <p>Il festival musicale di Montespertoli torna per l'edizione <span class="edizione"></span>.</p>
+        <p id="biglietti-messaggio">Clicca il bottone per prenotare il tuo posto!</p>
+        <button id="biglietti-btn" type="button">Biglietti <span class="edizione"></span></button>
+      </section>
+
+      <section id="programma">
+        <h2>Programma e Date <span class="edizione"></span></h2>
+        <p>Le date dell'edizione <span class="edizione"></span> saranno annunciate a breve.</p>
+      </section>
+
+      <section id="artisti">
+        <h2>Gli artisti <span class="edizione"></span></h2>
+
+        <div class="artist-grid"></div>
+      </section>
+    </main>
+
+    <!-- Scheda artista modale: si apre sopra la pagina, senza cambiarla -->
+    <div id="modal-artista" class="modal hidden" role="dialog" aria-modal="true">
+      <div class="modal-box">
+        <button id="modal-chiudi" class="modal-chiudi" type="button" aria-label="Chiudi scheda">&times;</button>
+        <p class="hero-edizione">Artista in programma</p>
+        <h2 id="artista-nome"></h2>
+        <h3>Chi e'</h3>
+        <p id="artista-descrizione"></p>
+        <h3>Genere</h3>
+        <p id="artista-genere"></p>
+        <h3>Nel festival</h3>
+        <p id="artista-palco"></p>
+        <h3>Dove ascoltarlo</h3>
+        <div class="artista-link">
+          <a id="link-spotify" href="#" target="_blank" rel="noopener">Spotify</a>
+          <a id="link-apple" href="#" target="_blank" rel="noopener">Apple Music</a>
+          <a id="link-sito" href="#" target="_blank" rel="noopener">Sito ufficiale</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Prodotto - Vitamina M</p>
+    </footer>
+
+    <script src="homepage.js"></script>
+  </body>
+</html>
