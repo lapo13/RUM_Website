@@ -80,6 +80,7 @@ nav ul {
 
 /* Bottone nella navbar per la pagina "Storia" */
 .nav-cta {
+  display: inline-block; /* senza questo, transform: scale() non funziona sugli <a> inline */
   padding: 8px 16px;
   border-radius: var(--radius);
   background-color: var(--color-accent);
