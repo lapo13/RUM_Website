@@ -8,16 +8,23 @@ Sito statico (HTML + CSS + JavaScript vanilla), senza framework.
 
 ```
 RUM_website/
+├── shared/
+│   ├── css/base.css      Stili comuni a tutte le pagine (base, navbar, sezioni, hero, media query)
+│   └── js/site.js        Monta header/navbar/footer in ogni pagina (active link automatico)
 ├── homepage/
 │   ├── index.html        Pagina principale: edizione corrente del festival
 │   ├── homepage.js       Logica: EDIZIONE, artisti + scheda modale, bottone biglietti
-│   ├── style.css         Stili (base condivisa + specifici homepage)
+│   ├── style.css         Stili specifici della homepage (artisti, modale, biglietti)
 │   └── images/           Immagini della homepage
 └── history/
     ├── index.html        Pagina "La storia del festival"
     ├── history.js        Logica: anno corrente dinamico
-    └── style.css         Stili (stessa base della homepage)
+    └── style.css         Stili specifici della pagina storia
 ```
+
+Ogni pagina carica `shared/css/base.css` + il proprio `style.css`, e monta
+header e footer tramite `shared/js/site.js` (attributi `data-page` e
+`data-logo` sull'elemento `<header id="site-header">`).
 
 ## Convenzioni
 
@@ -26,7 +33,8 @@ RUM_website/
 - **Font unico**: `Arial, sans-serif` su entrambe le pagine.
 - **Rotondità**: variabili `--radius` (16px) e `--radius-lg` (24px) in `:root`.
 - **Nessuna emoji** nei contenuti.
-- Ogni pagina carica il proprio script (`homepage.js`, `history.js`).
+- Ogni pagina carica `shared/js/site.js` (navbar/footer) + il proprio script
+  (`homepage.js`, `history.js`).
 
 ## Funzionalità attuali
 
